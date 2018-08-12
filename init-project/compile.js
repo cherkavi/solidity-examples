@@ -7,4 +7,5 @@ const inboxPath = path.resolve(__dirname, 'contracts', 'Inbox.sol'); // path to 
 const source = fs.readFileSync(inboxPath, 'utf8');
 
 var contractCompileData = solc.compile(source, 1);
-console.log(contractCompileData);
+// console.log(contractCompileData // .contracts[':Inbox']);
+module.exports = contractCompileData.contracts[':Inbox'];
